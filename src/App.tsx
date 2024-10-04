@@ -1,4 +1,5 @@
 import "./App.css";
+import Sidebar from "./components/Sidebar";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       </h1>
       <div className="p-4">
         <button className="btn-primary">Button from Flowbite</button>
+        <Sidebar />
       </div>
     </>
   );
