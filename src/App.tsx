@@ -1,17 +1,23 @@
 import "./App.css";
 import Sidebar from "./components/Sidebar";
+import Home from "./components/Home";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <>
-      <h1 className="text-2xl font-bold underline">
-        Currently Developing this website, please check in future to see updates
-      </h1>
-      <div className="p-4">
-        <button className="btn-primary">Button from Flowbite</button>
-        <Sidebar />
+    <Router>
+      <div>
+        <div>
+          <Sidebar />
+        </div>
+
+        <div>
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </div>
       </div>
-    </>
+    </Router>
   );
 }
 
